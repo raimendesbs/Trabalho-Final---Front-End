@@ -1,8 +1,4 @@
 
-/* =========================================================
-   ENTRE PÁGINAS — script.js
-   Thais: eventos, validação e manipulação do DOM
-   ========================================================= */
 
 /* INTERAÇÃO A — abas e cadastro de novas indicações */
 const botoesAbas = document.querySelectorAll(".aba-botao");
@@ -92,11 +88,11 @@ campoBuscaFaq.addEventListener("input", () => {
 
 
 /* INTERAÇÃO E — lista dinâmica de leitura */
-const campoNovoItem = document.getElementById("gabi_novo_item");
-const botaoNovoItem = document.getElementById("gabi_adicionar_item");
-const botaoLimparLista = document.getElementById("gabi_limpar_lista");
-const listaLeitura = document.getElementById("gabi_lista_leitura");
-const contadorLista = document.getElementById("gabi_contador");
+const campoNovoItem = document.getElementById("raissa_novo_item");
+const botaoNovoItem = document.getElementById("raissa_adicionar_item");
+const botaoLimparLista = document.getElementById("raissa_limpar_lista");
+const listaLeitura = document.getElementById("raissa_lista_leitura");
+const contadorLista = document.getElementById("raissa_contador");
 const botoesFiltro = document.querySelectorAll(".filtro");
 
 let livrosLeitura = [];
@@ -261,7 +257,7 @@ botaoTema.addEventListener("click", () => {
 
 
 /* VALIDAÇÃO OBRIGATÓRIA — formulário com 15 campos/controles */
-const formulario = document.getElementById("thais_formulario");
+const formulario = document.getElementById("raissa_formulario");
 
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
