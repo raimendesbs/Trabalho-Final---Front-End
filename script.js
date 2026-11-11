@@ -1,4 +1,3 @@
-y
 const botoesAbas = document.querySelectorAll(".aba-botao");
 const conteudosAbas = document.querySelectorAll(".conteudo-aba");
 
@@ -45,19 +44,27 @@ botaoAdicionarLivro.addEventListener("click", function () {
 
 
 
+
+/* FAQ - GABI */
+
+
+/* FAQ - GABI */
+
+// seleciona os elementos do FAQ
 const perguntasFaq = document.querySelectorAll(".faq-item");
 const campoBuscaFaq = document.getElementById("gabi_busca_faq");
 const mensagemSemResultado = document.getElementById("gabi_sem_resultado");
 
+// abre e fecha as respostas
 perguntasFaq.forEach((item) => {
     const botao = item.querySelector(".faq-pergunta");
 
     botao.addEventListener("click", () => {
         const estavaAberto = item.classList.contains("aberto");
 
-        perguntasFaq.forEach((outraPergunta) => {
-            outraPergunta.classList.remove("aberto");
-            outraPergunta.querySelector("span").textContent = "+";
+        perguntasFaq.forEach((pergunta) => {
+            pergunta.classList.remove("aberto");
+            pergunta.querySelector("span").textContent = "+";
         });
 
         if (!estavaAberto) {
@@ -67,24 +74,21 @@ perguntasFaq.forEach((item) => {
     });
 });
 
-
-
-
+// filtra as perguntas conforme o texto digitado
 campoBuscaFaq.addEventListener("input", () => {
-    const termo = campoBuscaFaq.value.trim().toLocaleLowerCase("pt-BR");
+    const termo = campoBuscaFaq.value.trim().toLowerCase();
     let quantidadeVisivel = 0;
 
     perguntasFaq.forEach((item) => {
-        const texto = item.textContent.toLocaleLowerCase("pt-BR");
+        const texto = item.textContent.toLowerCase();
         const corresponde = texto.includes(termo);
 
         item.hidden = !corresponde;
 
         if (!corresponde) {
             item.classList.remove("aberto");
-        }
-
-        if (corresponde) {
+            item.querySelector("span").textContent = "+";
+        } else {
             quantidadeVisivel++;
         }
     });

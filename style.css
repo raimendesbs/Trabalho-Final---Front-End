@@ -847,64 +847,79 @@ body.modo-escuro legend {
 
 
 
+
+/* responsividade para tablets */
 @media (max-width: 850px) {
-    .grade-explorar, .grade-autores {
-         grid-template-columns: repeat(2, 1fr); 
-        }
-
-    .grade-generos { 
-        grid-template-columns: repeat(2, 1fr); 
+    .grade-explorar,
+    .grade-autores,
+    .grade-generos {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .cabecalho-chamada { 
+    .cabecalho-chamada {
         display: none;
-     }
+    }
 }
+
+/* responsividade para celulares */
 @media (max-width: 650px) {
-    .cabecalho { 
-        flex-wrap: wrap; 
+    .cabecalho {
+        flex-wrap: wrap;
     }
 
-    .menu-principal { 
-        position: static; 
+    .menu-principal {
+        position: static;
     }
 
-    .menu-principal ul { 
-        justify-content: flex-start; 
+    .menu-principal ul {
+        justify-content: flex-start;
     }
 
-    .menu-principal a { 
-        padding: 10px 9px; 
+    .menu-principal a {
+        padding: 10px 9px;
     }
 
-    .introducao, .faq-grade, .form-grid {
-         grid-template-columns: 1fr; 
-        }
-
-    .grade-explorar, .grade-generos, .grade-autores {
-         grid-template-columns: 1fr; 
-        }
-
-    .sobre-grid {
-        grid-template-areas: "proposito" "conteudo" "desenvolvimento";
+    .introducao,
+    .faq-grade,
+    .form-grid {
         grid-template-columns: 1fr;
     }
-    .banner, .banner img {
-         min-height: 420px; height: 420px; 
-        }
+
+    .grade-explorar,
+    .grade-generos,
+    .grade-autores {
+        grid-template-columns: 1fr;
+    }
+
+    #sobre-grid {
+        grid-template-areas:
+            "proposito"
+            "conteudo"
+            "desenvolvimento";
+        grid-template-columns: 1fr;
+    }
+
+    .banner,
+    .banner img {
+        min-height: 420px;
+        height: 420px;
+    }
 
     .banner-texto {
-         padding: 25px; 
-        }
+        padding: 25px;
+    }
 
     .rodape {
-         flex-direction: column; align-items: flex-start; 
-        }
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     .lista-controles {
-         align-items: flex-start; flex-direction: column;
-         }
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
+
 
 
 
