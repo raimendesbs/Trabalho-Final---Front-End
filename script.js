@@ -1,8 +1,7 @@
-
-
-/* INTERAÇÃO A — abas e cadastro de novas indicações */
+y
 const botoesAbas = document.querySelectorAll(".aba-botao");
 const conteudosAbas = document.querySelectorAll(".conteudo-aba");
+
 
 function selecionarAba(idAba) {
     conteudosAbas.forEach((conteudo) => {
@@ -16,13 +15,17 @@ function selecionarAba(idAba) {
     });
 }
 
+
 botoesAbas.forEach((botao) => {
     botao.addEventListener("click", () => selecionarAba(botao.dataset.aba));
 });
 
+
+
 const campoNovoLivro = document.getElementById("thais_novo_livro");
 const botaoAdicionarLivro = document.getElementById("thais_adicionar_livro");
 const listaNovidades = document.getElementById("thais_lista_novidades");
+
 
 botaoAdicionarLivro.addEventListener("click", function () {
     const titulo = campoNovoLivro.value.trim();
@@ -41,7 +44,7 @@ botaoAdicionarLivro.addEventListener("click", function () {
 });
 
 
-/* INTERAÇÃO B — FAQ: accordion e busca instantânea */
+
 const perguntasFaq = document.querySelectorAll(".faq-item");
 const campoBuscaFaq = document.getElementById("gabi_busca_faq");
 const mensagemSemResultado = document.getElementById("gabi_sem_resultado");
@@ -63,6 +66,9 @@ perguntasFaq.forEach((item) => {
         }
     });
 });
+
+
+
 
 campoBuscaFaq.addEventListener("input", () => {
     const termo = campoBuscaFaq.value.trim().toLocaleLowerCase("pt-BR");
@@ -87,7 +93,7 @@ campoBuscaFaq.addEventListener("input", () => {
 });
 
 
-/* INTERAÇÃO E — lista dinâmica de leitura */
+// LISTA LEITURA --> RAISSA
 const campoNovoItem = document.getElementById("raissa_novo_item");
 const botaoNovoItem = document.getElementById("raissa_adicionar_item");
 const botaoLimparLista = document.getElementById("raissa_limpar_lista");
@@ -95,9 +101,11 @@ const listaLeitura = document.getElementById("raissa_lista_leitura");
 const contadorLista = document.getElementById("raissa_contador");
 const botoesFiltro = document.querySelectorAll(".filtro");
 
+
 let livrosLeitura = [];
 let filtroAtual = "todos";
 let proximoId = 1;
+
 
 function atualizarLista() {
     listaLeitura.innerHTML = "";
@@ -185,6 +193,8 @@ function atualizarLista() {
         listaLeitura.appendChild(item);
     });
 }
+// FINAL DA LISTA DE LEITURA RAISSA
+
 
 function adicionarLivroNaLista() {
     const titulo = campoNovoItem.value.trim();
@@ -217,6 +227,7 @@ campoNovoItem.addEventListener("keydown", (evento) => {
     }
 });
 
+
 botaoLimparLista.addEventListener("click", () => {
     if (livrosLeitura.length === 0) {
         alert("A lista já está vazia.");
@@ -228,6 +239,7 @@ botaoLimparLista.addEventListener("click", () => {
         atualizarLista();
     }
 });
+
 
 botoesFiltro.forEach((botao) => {
     botao.addEventListener("click", () => {
@@ -244,7 +256,8 @@ botoesFiltro.forEach((botao) => {
 });
 
 
-/* Personalização global: modo claro/escuro */
+
+
 const botaoTema = document.getElementById("thais_tema");
 
 botaoTema.addEventListener("click", () => {
@@ -256,7 +269,8 @@ botaoTema.addEventListener("click", () => {
 });
 
 
-/* VALIDAÇÃO OBRIGATÓRIA — formulário com 15 campos/controles */
+
+
 const formulario = document.getElementById("raissa_formulario");
 
 formulario.addEventListener("submit", (evento) => {
@@ -344,7 +358,7 @@ formulario.addEventListener("submit", (evento) => {
 });
 
 
-/* Arrow function usada para destacar links internos ao navegar */
+
 document.querySelectorAll(".menu-principal a").forEach((link) => {
     link.addEventListener("click", () => {
         document.querySelectorAll(".menu-principal a").forEach((item) => {
