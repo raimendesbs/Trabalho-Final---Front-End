@@ -252,15 +252,17 @@ botoesFiltro.forEach((botao) => {
     });
 });
 
+// troca de tema claro ou escuro - Thais
 const botaoTema = document.getElementById("tema");
 
 botaoTema.addEventListener("click", () => {
     const escuroAtivo = document.body.classList.toggle("modo-escuro");
 
     botaoTema.textContent = escuroAtivo
-        ? "Ativar modo claro"
-        : "Ativar modo escuro";
+        ? "Modo claro ☼"
+        : "Modo escuro ⏾";
 });
+// troca de tema claro ou escuro - Thais
 
 const formulario = document.getElementById("raissa_formulario");
 

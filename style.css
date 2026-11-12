@@ -191,7 +191,7 @@ a {
 
 .sobrelinha,
 .etiqueta {
-    color: #f4e8dd;
+    color: var(--dourado);
     font: 700 .72rem Arial, sans-serif;
     letter-spacing: 2px;
 }
@@ -271,6 +271,10 @@ body.modo-escuro .titulo-secao h2 {
 .dica-lateral h3 {
     color: var(--vinho);
     margin-top: 0;
+}
+
+body.modo-escuro .dica-lateral h3 {
+    color: #e8c99b;
 }
 
 .frase-livro {
