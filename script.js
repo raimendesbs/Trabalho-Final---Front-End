@@ -1,6 +1,6 @@
+// Prateleira - Thais
 const botoesAbas = document.querySelectorAll(".aba-botao");
 const conteudosAbas = document.querySelectorAll(".conteudo-aba");
-
 
 function selecionarAba(idAba) {
     conteudosAbas.forEach((conteudo) => {
@@ -14,17 +14,13 @@ function selecionarAba(idAba) {
     });
 }
 
-
 botoesAbas.forEach((botao) => {
     botao.addEventListener("click", () => selecionarAba(botao.dataset.aba));
 });
 
-
-
 const campoNovoLivro = document.getElementById("thais_novo_livro");
 const botaoAdicionarLivro = document.getElementById("thais_adicionar_livro");
 const listaNovidades = document.getElementById("thais_lista_novidades");
-
 
 botaoAdicionarLivro.addEventListener("click", function () {
     const titulo = campoNovoLivro.value.trim();
@@ -41,12 +37,9 @@ botaoAdicionarLivro.addEventListener("click", function () {
     campoNovoLivro.value = "";
     campoNovoLivro.focus();
 });
-
-
-
+// Prateleira - Thais
 
 /* FAQ - GABI */
-
 
 /* FAQ - GABI */
 
@@ -259,10 +252,7 @@ botoesFiltro.forEach((botao) => {
     });
 });
 
-
-
-
-const botaoTema = document.getElementById("thais_tema");
+const botaoTema = document.getElementById("tema");
 
 botaoTema.addEventListener("click", () => {
     const escuroAtivo = document.body.classList.toggle("modo-escuro");
@@ -271,9 +261,6 @@ botaoTema.addEventListener("click", () => {
         ? "Ativar modo claro"
         : "Ativar modo escuro";
 });
-
-
-
 
 const formulario = document.getElementById("raissa_formulario");
 
@@ -360,8 +347,6 @@ formulario.addEventListener("submit", (evento) => {
         formulario.reset();
     }
 });
-
-
 
 document.querySelectorAll(".menu-principal a").forEach((link) => {
     link.addEventListener("click", () => {

@@ -1,5 +1,3 @@
-
-
 :root {
     --vinho: #512d38;
     --vinho-escuro: #38202a;
@@ -193,7 +191,7 @@ a {
 
 .sobrelinha,
 .etiqueta {
-    color: var(--dourado);
+    color: #f4e8dd;
     font: 700 .72rem Arial, sans-serif;
     letter-spacing: 2px;
 }
